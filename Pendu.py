@@ -8,11 +8,10 @@ def randomaccesword():
     return wordchose
 
 word = randomaccesword()
-maskedword = ["" for _ in word]
+maskedword = ["_" for _ in word]
 tentatives = 5
 lettersguessed = []
 print("Mot masqué :"+ "_" * len(maskedword))
-#print("Mot masqué :", "".join(maskedword))
 
 while tentatives > 0 and "_" in maskedword:
     guess = input("Devinez une lettre : ").lower()
