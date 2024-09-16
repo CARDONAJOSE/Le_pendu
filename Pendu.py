@@ -6,7 +6,6 @@ def randomaccesword():
     wordlist = ["banana", "strawberry", "kiwi", "Orange", "Apple"]
     wordchose = random.choice(wordlist)
     return wordchose
-
 word = randomaccesword()
 print(word)
 
