@@ -13,7 +13,7 @@ print(word)
 def checkletters():
     array = randomacceswordword()
     letterinputted = input()
-    for i in array
+    for i in array:
         if letterinputted == i:
         return letterinputted
     
