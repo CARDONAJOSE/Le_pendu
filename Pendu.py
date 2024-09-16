@@ -8,38 +8,12 @@ def randomaccesword():
     return wordchose
 
 word = randomaccesword()
-maskedword = ["" for _ in word]
-tentatives = 6
-lettersguessed = []
-print("Mot masqué :"+ "_" * len(maskedword))
-#print("Mot masqué :", "".join(maskedword))
+print(word)
 
-while tentatives > 0 and "_" in maskedword:
-    guess = input("Devinez une lettre : ").lower()
-
-    if len(guess) != 1 or not guess.isalpha():
-        print("Veuillez entrer une lettre.")
-        continue
-
-    if guess in lettersguessed:
-        print("Vous avez déjà deviné cette lettre.")
-        continue
-
-    lettersguessed.append(guess)
-
-    if guess in word:
-        for index, letter in enumerate(word):
-            if letter == guess:
-                maskedword[index] = guess
-        print("Bonne réponse !")
-    else:
-        tentatives -= 1
-        print(f"Lettre incorrecte. Il vous reste {tentatives} tentatives.")
-
-    print("Mot masqué :", " ".join(maskedword))
-
-if "" not in maskedword:
-    print("Félicitations ! Vous avez gagné !")
-else:
-    print(f"Désolé, vous avez perdu. Le mot était '{word}'.")
+def checkletters():
+    array = randomacceswordword()
+    letterinputted = input()
+    for i in array:
+        if letterinputted == i:
+        return letterinputted
     
