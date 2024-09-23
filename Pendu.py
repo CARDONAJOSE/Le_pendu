@@ -12,7 +12,6 @@ maskedword = ["_" for _ in word]
 tentatives = 5
 lettersguessed = []
 print("Mot masqué :"+ "_" * len(maskedword))
-
 error = 0
 while tentatives > 0 and "_" in maskedword:
     guess = input("Devinez une lettre : ").lower()
@@ -23,7 +22,6 @@ while tentatives > 0 and "_" in maskedword:
     if guess in lettersguessed:
         print("Vous avez déjà deviné cette lettre.")
         continue
-
     lettersguessed.append(guess)
     if guess in word:
         for index, letter in enumerate(word):
@@ -35,7 +33,6 @@ while tentatives > 0 and "_" in maskedword:
         error += 1
         print("error est egale a ", error)
     print(f"Lettre incorrecte. Il vous reste {tentatives} tentatives.")
-
     print("Mot masqué :", " ".join(maskedword))
 if "" not in maskedword:
     print("Félicitations ! Vous avez gagné !")
